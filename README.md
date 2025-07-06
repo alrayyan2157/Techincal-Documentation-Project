@@ -2,7 +2,7 @@
 
 This project is a **Technical Documentation Page** built as part of the [freeCodeCamp Responsive Web Design Certification](https://www.freecodecamp.org/learn/). It provides documentation for a fictional Python utility library called `data_utils`, showcasing its features, usage, and example code.
 
-**🔗 [Live Preview](https://alrayyan2157.github.io/technical-documentation-project/)**
+**🔗 [Live Preview](https://alrayyan2157.github.io/Techincal-Documentation-Project/)**
 
 ## Features
 
@@ -23,7 +23,7 @@ styles.css      # Custom CSS for layout, fonts, and responsive design
 
 1. **Clone or Download this Repository:**
    ```
-   git clone https://github.com/yourusername/technical-documentation-page.git
+   git clone https://github.com/alrayyan2157/Techincal-Documentation-Project.git
    cd technical-documentation-page
    ```
 
