@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Python Documentation</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+
+  </head>
+  <body>
+    <nav id="navbar">
+      <header>Python Documentation</header>
+      <ul>
+        <li><a class="nav-link" href="#Installation">Installation</a></li>
+        <li><a class="nav-link" href="#Overview">Overview</a></li>
+        <li><a class="nav-link" href="#Getting_Started">Getting Started</a></li>
+        <li><a class="nav-link" href="#String_Utilities">String Utilities</a></li>
+        <li><a class="nav-link" href="#Number_Utilities">Number Utilities</a></li>
+        <li><a class="nav-link" href="#List_Utilities">List Utilities</a></li>
+        <li><a class="nav-link" href="#Date_and_Time_Utilities">Date and Time Utilities</a></li>
+        <li><a class="nav-link" href="#Validation_Functions">Validation Functions</a></li>
+        <li><a class="nav-link" href="#File_Utilities">File Utilities</a></li>
+        <li><a class="nav-link" href="#Logging_and_Debugging">Logging and Debugging</a></li>
+        <li><a class="nav-link" href="#Advanced_Usage">Advanced Usage</a></li>
+        <li><a class="nav-link" href="#Reference">Reference</a></li>
+      </ul>
+    </nav>
+
+    <main id="main-doc">
+      <section class="main-section" id="Installation">
+        <header>Installation</header>
+        <article>
+          <p>Install the package via pip or from source code using Git.</p>
+          <pre><code>pip install data-utils-py</code></pre>
+          <p>Or install from source:</p>
+          <pre><code>git clone https://github.com/yourusername/data-utils
+cd data-utils
+python setup.py install</code></pre>
+        </article>
+      </section>
+
+      <section class="main-section" id="Overview">
+        <header>Overview</header>
+        <article>
+          <p>The <span class="lib">data_utils</span> package provides helper functions for various utility tasks in data processing.</p>
+          <ul>
+            <li>String manipulation</li>
+            <li>Numerical calculations</li>
+            <li>List processing</li>
+            <li>File handling</li>
+            <li>Date & time conversion</li>
+            <li>Data validation</li>
+          </ul>
+        </article>
+      </section>
+
+      <section class="main-section" id="Getting_Started">
+        <header>Getting Started</header>
+        <article>
+          <p>This example shows how to import the library and use a simple function.</p>
+          <pre><code>from data_utils import strings, numbers, lists, dates
+
+# Capitalize every word in a sentence
+result = strings.title_case("hello world")
+print(result)  # Output: Hello World</code></pre>
+        </article>
+      </section>
+
+      <section class="main-section" id="String_Utilities">
+        <header>String Utilities</header>
+        <article>
+          <p>Use these functions to modify and clean up string data easily.</p>
+          <h1>Functions:</h1>
+          <ul>
+            <li><span class="lib">title_case(text: str) -> str</span></li>
+            <li><span class="lib">remove_special_characters(text: str) -> str</span></li>
+            <li><span class="lib">reverse_string(text: str) -> str</span></li>
+          </ul>
+          <h1>Example</h1>
+          <pre><code>print(strings.remove_special_characters("Hello@#%$ World!!"))
+# Output: Hello World</code></pre>
+          <pre><code>print(strings.reverse_string("python"))
+# Output: nohtyp</code></pre>
+        </article>
+      </section>
+
+      <section class="main-section" id="Number_Utilities">
+        <header>Number Utilities</header>
+        <article>
+          <p>Basic mathematical operations and number handling made simple.</p>
+          <h1>Functions:</h1>
+          <ul>
+            <li><span class="lib">is_prime(n: int) -> bool</span></li>
+            <li><span class="lib">factorial(n: int) -> int</span></li>
+            <li><span class="lib">average(numbers: List[float]) -> float</span></li>
+          </ul>
+          <h1>Example</h1>
+          <pre><code>print(numbers.is_prime(13))  # Output: True
+print(numbers.factorial(5)) # Output: 120
+print(numbers.average([10, 20, 30])) # Output: 20.0</code></pre>
+        </article>
+      </section>
+
+      <section class="main-section" id="List_Utilities">
+        <header>List Utilities</header>
+        <article>
+          <p>Tools for working with lists, like flattening and chunking.</p>
+          <h1>Functions:</h1>
+          <ul>
+            <li><span class="lib">flatten(nested_list: List) -> List</span></li>
+            <li><span class="lib">unique(items: List) -> List</span></li>
+            <li><span class="lib">chunks(lst: List, n: int) -> Generator[List, None, None]</span></li>
+          </ul>
+          <h1>Example</h1>
+          <pre><code>print(lists.flatten([[1, 2], [3, 4]]))
+# Output: [1, 2, 3, 4]
+
+print(lists.unique([1, 1, 2, 3]))
+# Output: [1, 2, 3]</code></pre>
+        </article>
+      </section>
+
+      <section class="main-section" id="Date_and_Time_Utilities">
+        <header>Date and Time Utilities</header>
+        <article>
+          <p>These functions help with formatting, parsing, and computing dates and times.</p>
+          <h1>Functions:</h1>
+          <ul>
+            <li><span class="lib">parse_date(date_str: str, fmt: str) -> datetime</span></li>
+            <li><span class="lib">format_date(date_obj: datetime, fmt: str) -> str</span></li>
+            <li><span class="lib">time_diff(start: datetime, end: datetime) -> timedelta</span></li>
+          </ul>
+          <h1>Example</h1>
+          <pre><code>dt = dates.parse_date("2025-07-06", "%Y-%m-%d")
+print(dates.format_date(dt, "%d %b %Y"))
+# Output: 06 Jul 2025</code></pre>
+        </article>
+      </section>
+
+      <section class="main-section" id="Validation_Functions">
+        <header>Validation Functions</header>
+        <article>
+          <p>Functions to validate common inputs like email, phone, and passwords.</p>
+          <h1>Functions:</h1>
+          <ul>
+            <li><span class="lib">is_valid_email(email: str) -> bool</span></li>
+            <li><span class="lib">is_valid_phone(number: str) -> bool</span></li>
+            <li><span class="lib">is_strong_password(password: str) -> bool</span></li>
+          </ul>
+          <h1>Example</h1>
+          <pre><code>print(validation.is_valid_email("user@example.com"))
+# Output: True
+
+print(validation.is_strong_password("abc123"))
+# Output: False</code></pre>
+        </article>
+      </section>
+
+      <section class="main-section" id="File_Utilities">
+        <header>File Utilities</header>
+        <article>
+          <p>Read and write files and JSON with these easy-to-use utilities.</p>
+          <h1>Functions:</h1>
+          <ul>
+            <li><span class="lib">read_file(path: str) -> str</span></li>
+            <li><span class="lib">write_file(path: str, data: str) -> None</span></li>
+            <li><span class="lib">read_json(path: str) -> dict</span></li>
+          </ul>
+          <h1>Example</h1>
+          <pre><code>file_utils.write_file("sample.txt", "Hello World")
+print(file_utils.read_file("sample.txt"))
+# Output: Hello World</code></pre>
+        </article>
+      </section>
+
+      <section class="main-section" id="Logging_and_Debugging">
+        <header>Logging and Debugging</header>
+        <article>
+          <p>Log important messages or errors while developing your application.</p>
+          <h1>Functions:</h1>
+          <ul>
+            <li><span class="lib">log_info(msg: str)</span></li>
+            <li><span class="lib">log_error(msg: str)</span></li>
+          </ul>
+          <h1>Example</h1>
+          <pre><code>logger.log_info("Script started")
+logger.log_error("Something went wrong")</code></pre>
+        </article>
+      </section>
+
+      <section class="main-section" id="Advanced_Usage">
+        <header>Advanced Usage</header>
+        <article>
+          <p>Combine utilities to perform powerful data operations with minimal code.</p>
+          <pre><code>text = "hello@python!"
+clean = strings.remove_special_characters(text)
+reverse = strings.reverse_string(clean)
+print(reverse)
+# Output: nohtypolleH</code></pre>
+        </article>
+      </section>
+
+      <section class="main-section" id="Reference">
+        <header>Reference</header>
+        <article>
+          <p>All the documentation in this page is taken from <a href="https://docs.python.org" target="_blank">Python Docs</a></p>
+        </article>
+      </section>
+    </main>
+  </body>
+</html>
